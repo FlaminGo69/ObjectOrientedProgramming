@@ -8,11 +8,10 @@ class TimeOfDayTest {
 
 	@Test
 	void test() {
-		TimeOfDay NewTime = new TimeOfDay(18, 14);
-		int hours =  NewTime.getHours();
-		int minutes = NewTime.getMinutes();
-		NewTime.setHours(23);
+		TimeOfDay NewTime = new TimeOfDay("1:54");
+		NewTime.setHours(2);
 		NewTime.setMinutes(37);
+		assert(NewTime.getMinutes() == 37);
 	}
 
 }
