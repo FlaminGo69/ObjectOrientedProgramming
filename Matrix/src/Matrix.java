@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 /**
  * 
@@ -61,15 +62,15 @@ class Matrix {
 	
 	/**
 	 * @inspects | this
+	 * @creates | result
 	 * @post | result.length == toBeScaled.length
 	 */
-	
 	public double [] scaled(double factor, double [] toBeScaled) {
 		if (toBeScaled == null) {
 			throw new IllegalArgumentException("Your matrix is null");
 		}
 		double [] scaledmatrix = new double [toBeScaled.length];
-		for (int k = 0; k< toBeScaled.length; k++) {
+		for (int k = 0; k < toBeScaled.length; k++) {
 			scaledmatrix[k] = toBeScaled[k]*factor;
 		}
 		return scaledmatrix;
@@ -125,12 +126,6 @@ class Matrix {
 		return matr1;	
 	}
 	/*
-	
-	public double [] getColumnmajor() {
-		//later
-	}
-	*/
-	
 	
 	/**
 	 * 
